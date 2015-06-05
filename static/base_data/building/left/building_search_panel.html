@@ -1,0 +1,85 @@
+<div id="building_search_panel_content" style="margin-left: 5px;margin-top: 40px;">
+
+        <div class="panel_row">
+
+            <input class="input_text" type="text" placeholder="业主姓名(用，分隔)"/>
+
+        </div>
+
+        <div class="panel_row form-group" style="margin: 0px">
+
+            <select id="ye_tai" multiple="multiple"  class="form-control">
+                <option value="1">住宅</option>
+                <option value="2">商业</option>
+                <option value="3">住宅车位</option>
+                <option value="4">商业车位</option>
+                <option value="5">其他</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="panel_row">
+            <input class="input_text"  type="text" placeholder="建筑面积"  style="width: 80px"/> ～  <input type="text" class="input_text" placeholder="建筑面积" style="width: 80px"/>
+        </div>
+
+
+        <div class="panel_row">
+            <input class="input_text"  type="text" placeholder="交工日期"  style="width: 80px"/> ～  <input type="text" class="input_text" placeholder="交工日期" style="width: 80px"/>
+        </div>
+
+        <div class="panel_row form-group" style="margin: 0px">
+
+            <select id="is_vacant"  class="form-control">
+                <option value="0">是否空置</option>
+                <option value="1">空置</option>
+                <option value="2">不空置</option>
+            </select>
+
+        </div>
+
+
+        <div class="panel_row form-group" style="margin: 0px">
+
+            <select id="is_decorate"  class="form-control">
+                <option value="0">是否装修</option>
+                <option value="1">已装修</option>
+                <option value="2">未装修</option>
+            </select>
+
+        </div>
+
+        <div class="panel_row">
+
+            <button type="button" class="js_btn_choose_house btn btn-default" data-toggle="dropdown" title="选择房产" aria-expanded="false">
+                <span class="multiselect-selected-text">选择房产</span> <b class="caret"></b>
+            </button>
+
+        </div>
+
+
+        <div class="panel_row">
+            <input type="button" class="js_search_building_btn btn_search" value="搜索">
+        </div>
+
+
+        <div id="house_choose_dialog" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">请选择房产</h4>
+                    </div>
+                    <div id="content_house_choose_dialog" class="modal-body" style="min-height:300px;max-height: 80%;overflow: auto">
+                        <div id="dialog_house_tree"/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">确 认</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>

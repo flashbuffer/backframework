@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords"
+          content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/xxxx.ico">
+
+    <title>生活</title>
+    <link rel="stylesheet" type="text/css"
+          href="css/style-old-global_56ed7ea9.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="css/style-old-list.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="js-3rd/jtree/themes/default/style.min.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="css/rz.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="css/customized_bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="js-3rd/multi-select/css/bootstrap-multiselect.css">
+
+
+    <script type="text/javascript"></script>
+
+    <style>
+        .jstree-icon.jstree-ocl {
+            position: relative;
+
+        }
+
+    </style>
+    </head>
+<body>
+
+<div id="header" class="head">
+    <div class="container_box"><h1 class="logo"><a class="avatar js_boss" href="/cgi-bin/home"
+                                                   data-boss="menu-top-avatar"> </a><a
+            href="" class="txt js_boss" data-boss="menu-top-name">泽信-融智生活</a></h1>
+
+        <div class="mod-head__nav">
+             <span
+                class="mod-head__nav-line"></span> <a href="#notice" class="js_notice_btn mod-head__nav-item js_boss"
+                                                      data-boss="menu-top-notice" title="通知"><span
+                class="mod-head__nav-notice mod-head__nav-notice_hasnews"><i class="icon-notice"></i></span></a> <span
+                class="mod-head__nav-line"></span> <span class="mod-head__nav-item"><span>登陆人</span></span>
+            <span class="mod-head__nav-line"></span>
+            <a href="/cgi-bin/logout" id="logout"
+                                                        class="mod-head__nav-item js_boss" data-boss="menu-top-lagout">退出</a>
+        </div>
+    </div>
+</div>
+<div id="body content" class="body">
+    <div class="container_box">
+        <div class="col_side">
+            <ul id="menuBar" class="menu_box">
+                <li id="menu_send" class="menu menu_first">
+                    <a href="#baseData" class="menu_title js_boss"
+                                                              data-boss="menu-left-compose"><i
+                        class="icon_menu compose"></i>基础资料</a></li>
+                <li id="menu_contacts" class="menu">
+                    <a href="#contacts" class="menu_title js_boss"
+                                                       data-boss="menu-left-contacts"><i class="icon_menu address"></i>调度中心</a>
+                </li>
+
+                <li id="menu_message" class="menu">
+                    <a href="#message/default/usermsg"
+                       class="menu_title js_boss"     data-boss="menu-left-message">
+                        <i class="icon_menu message"></i>财务收费<i
+                        class="menu_tip" style="display:none"></i></a></li>
+                <li id="menu_analysis" class="menu"><a href="#analysis/chart/userdata" class="menu_title js_boss"
+                                                       data-boss="menu-left-analysis"><i
+                        class="icon_menu analyse analysis"></i>使用分析</a></li>
+                <li id="menu_setting" class="menu menu_last"><a href="#setting" class="menu_title js_boss"
+                                                                data-boss="menu-left-setting"><i
+                        class="icon_menu setting"></i>设置</a></li>
+                <div class="classify_title"></div>
+            </ul>
+        </div>
+
+        <img id="loading_img" src="img/comm/throbber.gif" style="z-index:1000;  display:none;position: absolute;top:50%;left: 50%">
+
+        <div class="col_main js_col_main">
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- global js -->
+<script src ="sea-modules/seajs/seajs/2.2.3/sea-debug.js"></script>
+<script src ="sea-modules/seajs/seajs-text/1.0.2/seajs-text-debug.js"></script>
+<script src ="js-3rd/jquery-2.1.4.min.js"></script>
+<script src ="js-3rd/underscore.js"></script>
+
+<script src ="js-3rd/backbone.js"></script>
+<script src ="js-3rd/bootstrap.min.js"></script>
+
+<script src="js-3rd/jtree/jstree.js"></script>
+<script src="js-3rd/multi-select/js/bootstrap-multiselect.js"></script>
+
+
+
+<script src="js/network.js"></script>
+<script>
+
+    //所有的 api url
+    window.rz={
+        url_prefix:'http://www.host.com:8080/api/',
+        list_user_house:'list_house'
+    }
+
+
+
+    seajs.config({
+        base: "../sea-modules/",
+        alias: {
+
+        }
+    });
+
+    seajs.use("./main");
+
+
+</script>
+</body>
+</html>

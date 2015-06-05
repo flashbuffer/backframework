@@ -1,0 +1,89 @@
+<div class="member_choosed_box">
+    <div class="choosed_header">
+        <a href="javascript:;" class="js_close icon icon_close"></a>
+
+        <p class="choosed_mainTitle">房产资料</p>
+
+    </div>
+    <div class="choosed_content ">
+        <ul class="member_avator_list js_member_list">
+            <li>
+            <%_.each(house_list, function(item) {%>
+            <div class="cc_content">
+
+                <div class="item">
+                    <span class="label">地区</span>
+                    <p class="info"><%=item.area%></p>
+                </div>
+
+                <div class="item">
+                    <span class="label">编码</span>
+                    <p class="info"><%=item.serialNumber%></p>
+                </div>
+
+                <div class="item">
+                    <span class="label">地区</span>
+                    <p class="info"><%=item.area%></p>
+                </div>
+
+                <div class="item">
+                    <span class="label">编码</span>
+                    <p class="info"><%=item.serialNumber%></p>
+                </div>
+                <div class="item">
+                    <span class="label">地区</span>
+                    <p class="info"><%=item.area%></p>
+                </div>
+
+                <div class="item">
+                    <span class="label">编码</span>
+                    <p class="info"><%=item.serialNumber%></p>
+                </div>
+                <div class="item">
+                    <span class="label">地区</span>
+                    <p class="info"><%=item.area%></p>
+                </div>
+
+                <div class="item">
+                    <span class="label">编码</span>
+                    <p class="info"><%=item.serialNumber%></p>
+                </div>
+
+                <div class="item">
+                    <span class="label">地区</span>
+                    <p class="info"><%=item.area%></p>
+                </div>
+
+                <div class="item">
+                    <span class="label">编码</span>
+                    <p class="info"><%=item.serialNumber%></p>
+                </div>
+
+
+            </div>
+            <%});%>
+            </li>
+        </ul>
+    </div>
+
+    <div class="member_tool js_member_toolbar">
+
+
+        <button class="btn disabled" disabled="" title="非本部门成员无置顶功能" style="pointer-events:auto">置顶</button>
+
+        <a class="btn js_update disabled">修改</a>
+        <a class="btn js_invite disabled">邀请关注</a>
+        <a class="btn js_enable disabled">禁用</a>
+        <a class="btn js_menu disabled">更多</a>
+
+        <div class="js_menu_list menu_list" style="display:none;z-index:400">
+            <ul>
+                <li><a class="js_move">移动</a></li>
+                <li><a class="js_delete">删除</a></li>
+                <li><a class="js_review">日志</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>

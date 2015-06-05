@@ -1,0 +1,187 @@
+<div id="js_contacts24" class="col_mainInner">
+    <div class="contact_view">
+
+
+        <div class="js_toolbar tool_bar">
+
+            <!-- left bar -->
+            <div id="generic_tool_bar" class="js_toolbar_left bar_left toolbar_search_add_box">
+
+                <div class="dropdown drop_member">
+                    <a class="icon icon_add ui-ml-medium dropdown-toggle" data-toggle="dropdown"
+                       href="javascript:;"></a>
+                    <ul class="dropdown-menu" role="menu" style="top: 40px; left: 143px;">
+                        <li role="presentation" class="js_menu_create"><a role="menuitem" tabindex="-1"
+                                                                          href="javascript:;">新增</a></li>
+                        <li role="presentation" class="js_menu_import"><a role="menuitem" tabindex="-1"
+                                                                          href="javascript:;">批量导入</a></li>
+
+                    </ul>
+                </div>
+
+                <a class="js_search_tool_bar icon icon_search"></a>
+
+                <div class="js_menu_search_box toolbar_search_form" style="display:none;z-index:400;">
+                    <input type="text" class="js_menu_search_input input_text" name="query" placeholder=""
+                           id="token-input-" autocomplete="off" style="outline: none;">
+                    <span class="icon icon_magnifying"></span>
+                </div>
+
+                <div class="dropdown drop_choose_menu">
+                    <a id="leftDropDwon" data-target="#" class=" dropdown-toggle choose_menu_title" data-toggle="dropdown">
+                        <span>业主资料</span><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation" class="js_menu_resident"><a role="menuitem" tabindex="-1"
+                                                                         href="javascript:;">业主资料</a></li>
+                        <li role="presentation" class="js_menu_staff"><a role="menuitem" tabindex="-1"
+                                                                       href="javascript:;">物业资料</a></li>
+                        <li role="presentation" class="js_menu_building"><a role="menuitem" tabindex="-1"
+                                                                       href="javascript:;">园区楼宇</a></li>
+
+                        <li role="presentation" class="js_menu_incident_category"><a role="menuitem" tabindex="-1"
+                                                                            href="javascript:;">报事类型</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div id="tool_bar_return" class="bar_left toolbar_search_add_box" style="display: none;">
+                <input type="button" class="js_return_tool_bar btn_return" value="返回">
+            </div>
+            <!-- end left bar -->
+
+
+            <!-- right bar -->
+            <div class="js_toolbar_right bar_right">
+                <div class="bar_right_text-title">
+                   <div class="dropdown drop_page_title">
+                        <a  data-target="#" class=" dropdown-toggle choose_menu_title" data-toggle="dropdown">
+                            <span>全部成员</span><b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu drop_member">
+                            <li value="0">
+                                <i class="icon_check"></i>
+                                <a tabindex="-1" href="javascript:;">全部成员<span class="gray">(1)</span></a>
+                            </li>
+                            <li value="1">
+                                <i class="icon_check"></i>
+                                <a tabindex="-1" href="javascript:;">已关注<span class="gray">(1)</span></a>
+                            </li>
+                            <li value="8">
+                                <i class="icon_check"></i>
+                                <a tabindex="-1" href="javascript:;">未关注<span class="gray">(0)</span></a>
+                            </li>
+                            <li value="4">
+                                <i class="icon_check"></i>
+                                <a tabindex="-1" href="javascript:;">已禁用<span class="gray">(0)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="ui-fl-r">
+                    <a href="javascript:;" class="js_memu_invit btn " style="display: none;">邀请关注(0)</a>
+                </div>
+            </div>
+
+            <!-- end right bar -->
+
+        </div>
+
+        <!-- left panel -->
+        <div id="left_panel" class="contact_box" style="overflow: auto">
+            <div id="building_tree_panel">
+                <div id="building_tree" style="height: 100%;display: none"/>
+            </div>
+
+
+            <div id="building_search_panel" class="contact-tag" style="display: none"/>
+
+
+         </div>
+        <!-- end left panel -->
+
+
+
+
+           <div class="js_content tree_list" style="margin-top:45px">
+
+                <div>
+                    <div class="js_title_bar title_bar">
+                        <div class="js_head_tips mod-tap-bar_warning" style="display: none;">
+                            <span class="mod-tap-bar_warning__text"></span>
+                        </div>
+
+                        <div class="js_title title">
+                            <div class="checkbox_node">
+                                <input type="checkbox" class="checkbox">
+                            </div>
+                            <span class="js_title_party">
+                                <p class="name"><a href="javascript:;" class="title_link title_link_sort">楼栋名称</a></p>
+                                <p class="account"><a href="javascript:;" class="title_link">单元</a></p>
+                                <p class="position"><a href="javascript:;" class="title_link">房间号</a></p>
+                                <p class="phone"><a href="javascript:;" class="title_link">x手机</a></p>
+                                <p class="mail"><a href="javascript:;" class="title_link">x邮箱</a></p>
+                                <p class="state"><a href="javascript:;" class="title_link">x状态</a></p>
+                            </span>
+                            <span class="js_title_tag" style="display: none;">
+                                <p class="name"><a href="javascript:;" class="title_link title_link_sort">名字</a></p>
+                                <p class="mail"><a href="javascript:;" class="title_link">部门</a></p>
+                                <p class="position"><a href="javascript:;" class="title_link">类型</a></p>
+                                <p class="state"><a href="javascript:;" class="title_link">状态</a></p>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <ul id="member_list" class="js_list member_list">
+
+                        <%_.each(house_list, function(item) {%>
+
+                            <li data-id="727019839" data-type="member" class="">
+                                <div class="checkbox_node js_checkbox_help">
+                                    <input type="checkbox" class="js_checkbox checkbox">
+                                </div>
+                                <img src=""
+                                     class="face js_lazy" style="visibility: hidden">
+
+                                <p class="name js_username"><%=item.buildin_name%></p>
+
+                                <p class="account"><%=item.unit%></p>
+
+                                <p class="position" title=""><%=item.room_number%></p>
+
+                                <p class="phone" title=""></p>
+
+                                <p class="mail">sky-pea@163.com</p>
+
+                                <p class="state">
+
+                                </p>
+                            </li>
+                        <%});%>
+                    </ul>
+
+                    <div class="js_empty text_center" style="display:none;padding: 50px;">没有成员</div>
+                    <div class="js_empty_usage text_center"
+                         style="display:none; position: absolute; top: 50%; width: 100%; margin-top: -75px; color: #777; font-size: 16px;">
+                        <span class="contact_empty_icon"></span>
+
+                        <div class="ui-mt-medium">通讯录为空<br>你可以点击＋添加成员</div>
+                    </div>
+                    <div class="js_body_tips mod-text-nopeople_center" style="display: none;">当前标签无通讯录可见的成员或部门|没有成员
+                    </div>
+
+                    <div class="js_loading text_align_center list_empty_loading"
+                         style="display: none; text-align: center;"></div>
+                    <div class="mod-label__tip-title" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="opp_result" style="display: none; right: -370px;">
+
+    </div>
+    <div class="opp_result" style="display: none; right: -370px;"></div>
+</div>
